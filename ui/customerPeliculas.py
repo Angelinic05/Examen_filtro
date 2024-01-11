@@ -1,16 +1,13 @@
 import os
 import funciones.peliculas as cp
+import ui.customergeneros as cg
 
+# peliculas = {}
 
-peliuclas = {}
+# def generarPelicula():
+#     cp.cf.checkfile(cp.peliculas)
 
-def generarPelicula():
-    cp.cf.checkfile(cp.peliculas)
-
-# def BuscarPelicula():
-#     data = cp.
 def agregarPelicula():
-    print("aaaaaaaaaaa")
     cp.cf.checkfile(cp.peliculas)
     id = int(input("Ingrese el id de la pelicula: "))
     nom = input("Ingrese el nombre de la pelicula: ")
@@ -20,10 +17,19 @@ def agregarPelicula():
         'id': id,
         'nombre':nom,
         'duracion':duracion,
-        'sipnosis':sipnosis
+        'sipnosis':sipnosis,
+        'generos':'',
+        'actores':'',
+        'formato':''
+
     }
-    print(pelicula)
-    cp.newpelicula()
+    cp.newpelicula(pelicula)
     os.system('pause')
+    return pelicula
+
+def EliminarPelicula():
+    cp.DelPelicula()
+
+
     
 

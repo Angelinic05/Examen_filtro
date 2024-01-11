@@ -1,5 +1,8 @@
 import os
-import ui.customerMenu as cus
+import ui.customerPeliculas as cus
+import ui.customergeneros as cug
+import ui.customeractores as cua
+import ui.customerfomatos as cuf
 
 MenuGeneros = ('1. Crear Genero\n2. Listar Generos\n3. Ir a Menu Principal')
 MenuActores = ('1. Crear Actor\n2. ListarActor\n3. Ir a Menu Principal')
@@ -8,6 +11,11 @@ Informes = ('1. Listar las peliculas de un genero especifico\n2. Listar las peli
 MenuPeliculas = ('1. Agregar pelicula\n2. Editar pelicula\n3. Eliminar pelicula\n4. Eliminar Actor\n5. Buscar pelicula\n6 listar todas peliculas\n7. Menu principal')
 
 def Administradorgeneros():
+    print("")
+    print("""----------------------
+          GESTOR DE GENEROS
+          ----------------------""")
+    print("")
     isActive = True 
     while(isActive):
         os.system('cls')
@@ -20,6 +28,7 @@ def Administradorgeneros():
         else:
             if(opc == 1):
                 pass
+                cug.agregarGenero()
             elif(opc == 2):
                 pass
             elif(opc == 3):
@@ -38,7 +47,7 @@ def AdministadorActores():
             print("opción no válida...")
         else:
             if(opc == 1):
-                pass
+                cua.agregarActor()
             elif(opc == 2):
                 pass
             elif(opc == 3):
@@ -57,7 +66,7 @@ def AdministradorFormatos():
             print("opción no válida...")
         else:
             if(opc == 1):
-                pass
+                cuf.agregarFormato()
             elif(opc == 2):
                 pass
             elif(opc == 3):
@@ -71,16 +80,18 @@ def GestorPeliculas():
         print(MenuPeliculas)
         try:
             print("")
-            opc = int(input("opción p: "))
+            opc = int(input("opción: "))
         except ValueError:
             print("opción no válida...")
         else:
             if(opc == 1):
-                cus.agregarPelicula
+                cus.agregarPelicula()
+                os.system('pause')
             elif(opc == 2):
                 pass
             elif(opc == 3):
-                pass
+                cus.EliminarPelicula()
+                os.system('pause')
             elif(opc == 4):
                 pass
             elif(opc == 5):

@@ -5,7 +5,7 @@ import funciones.corefile as cf
 MenuPeliculasBlock = ('1. Administrador de generos\n2. Administador de actores\n3. Administrador de formatos\n4. Gestor de informes\n5. Gestor de peliculas\n6. salir')
 
 isActive = True
-#if __Menu__ as __main__:
+#if __Menu__  __main__():
 
 while(isActive):
     os.system('cls')

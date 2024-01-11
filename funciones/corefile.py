@@ -36,4 +36,6 @@ def checkfile(*param):
         else:
             if len(param):
                 newfile(data[0])
+
+def search(*)
            
