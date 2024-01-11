@@ -1,16 +1,15 @@
 import os
 import funciones.peliculas as cp
+import funciones.corefile as cf
 
-
-def agregarFormato(pelicula):
+def agregarFormato():
     cp.cf.checkfile(cp.peliculas)
-    id = int(input("Ingrese el id de la pelicula: "))
+    id = input("Ingrese el id del formato: ")
     nom = input("Ingrese el nombre del formato: ")
     formato ={
         'id': id,
         'nombre':nom,
     }
     print(formato)
-    pelicula.update({formato ['id']:pelicula})
-    cp.newpelicula(pelicula)
+    cf.addData(id,nom)
     os.system('pause')

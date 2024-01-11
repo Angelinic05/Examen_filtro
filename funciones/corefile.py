@@ -7,13 +7,13 @@ def newfile (*param):
     with open (MY_DATA,'w') as wf:
         json.dump(param[0],wf,indent=4)
 
-def addData(*param):
+def addData(id: str, *args: dict):
     with open (MY_DATA,'r+') as rwf:
         data_file = json.load(rwf)
-        if (len(param)> 1):
-            data_file.update({param[0]:param[1]})
+        if (len(args[0])> 1):
+            data_file.update({id:args[0]})
         else:
-            data_file.update({param[0]})
+            data_file.update({id})
         rwf.seek(0)
         json.dump(data_file,rwf,indent=4)
         rwf.close()
@@ -36,6 +36,3 @@ def checkfile(*param):
         else:
             if len(param):
                 newfile(data[0])
-
-def search(*)
-           

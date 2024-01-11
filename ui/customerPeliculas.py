@@ -23,6 +23,7 @@ def agregarPelicula():
         'formato':''
 
     }
+    
     cp.newpelicula(pelicula)
     os.system('pause')
     return pelicula

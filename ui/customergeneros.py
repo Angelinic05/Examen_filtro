@@ -1,20 +1,27 @@
 import os
 import funciones.peliculas as cp
-
+import funciones.corefile as cf
 # peliuclas = {}
 
 # def generarPelicula():
 #     cp.cf.checkfile(cp.peliculas)
 
-def agregarGenero(pelicula):
+def agregarGenero():
     cp.cf.checkfile(cp.peliculas)
-    id = int(input("Ingrese el id de la pelicula: "))
+    id = input("Ingrese el id del genero: ")
     nom = input("Ingrese el nombre del genero: ")
     genero ={
         'id': id,
         'nombre':nom,
     }
     print(genero)
-    pelicula.update({genero ['id']:pelicula})
-    cp.newpelicula(pelicula)
+    cf.addData(id,nom)
     os.system('pause')
+
+def listarGenero(genero: dict):
+    cf.readfile()
+    print(genero)
+    os.system('pause')
+    # for i,j in peliculas.items():
+    #     for key,item in j.items():
+    #         print(f"{key}:{item}")

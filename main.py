@@ -9,13 +9,16 @@ isActive = True
 
 while(isActive):
     os.system('cls')
+    print("")
+    print(" SISTEMA DE INFORMACION DE PELICULAS ")
+    print("-------------------------------------")
     print(MenuPeliculasBlock)
-    pe.validarArchivo()
     try:
         print("")
         opc = int(input("opción: "))
     except ValueError:
         print("opción no válida...")
+        os.system("pause")
     else:
         if(opc == 1):
             menu.Administradorgeneros() 

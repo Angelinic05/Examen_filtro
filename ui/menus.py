@@ -3,34 +3,34 @@ import ui.customerPeliculas as cus
 import ui.customergeneros as cug
 import ui.customeractores as cua
 import ui.customerfomatos as cuf
+import funciones.peliculas as pe
 
 MenuGeneros = ('1. Crear Genero\n2. Listar Generos\n3. Ir a Menu Principal')
-MenuActores = ('1. Crear Actor\n2. ListarActor\n3. Ir a Menu Principal')
-MenuFormatos = ('1. AgregarPelicula\n2. EditarPelicula\n3. EliminarPelicula\n4. EliminarActor\n5.BuscarPelicula\n6. Listar todas las peliculas\n7. Menu principal')
+MenuActores = ('1. Crear Actor\n2. Listar Actor\n3. Ir a Menu Principal')
+MenuFormatos = ('1. Crear Formatos\n2. Listar Formatos\n3. Ir a Menu Formatos')
 Informes = ('1. Listar las peliculas de un genero especifico\n2. Listar las peliculas donde el protagonista sea Silvester Stallone\n3. Buscar pelicula y mostrar la sipnosis y los actores\n 4. Menu principal')
 MenuPeliculas = ('1. Agregar pelicula\n2. Editar pelicula\n3. Eliminar pelicula\n4. Eliminar Actor\n5. Buscar pelicula\n6 listar todas peliculas\n7. Menu principal')
 
 def Administradorgeneros():
-    print("")
-    print("""----------------------
-          GESTOR DE GENEROS
-          ----------------------""")
-    print("")
     isActive = True 
     while(isActive):
         os.system('cls')
+        print("")
+        print(" GESTOR DE GENEROS ")
+        print("-------------------------------------")
         print(MenuGeneros)
         try:
             print("")
             opc = int(input("opción: "))
         except ValueError:
             print("opción no válida...")
+            os.system("pause")
         else:
             if(opc == 1):
                 pass
                 cug.agregarGenero()
             elif(opc == 2):
-                pass
+                cug.listarGenero()
             elif(opc == 3):
                 os.system('pause')
                 isActive = False
@@ -39,12 +39,16 @@ def AdministadorActores():
     isActive = True 
     while(isActive):
         os.system('cls')
+        print("")
+        print(" GESTOR DE ACTORES ")
+        print("-------------------------------------")
         print(MenuActores)
         try:
             print("")
             opc = int(input("opción: "))
         except ValueError:
             print("opción no válida...")
+            os.system("pause")
         else:
             if(opc == 1):
                 cua.agregarActor()
@@ -58,12 +62,16 @@ def AdministradorFormatos():
     isActive = True 
     while(isActive):
         os.system('cls')
+        print("")
+        print(" GESTOR DE FORMATOS ")
+        print("-------------------------------------")
         print(MenuFormatos)
         try:
             print("")
             opc = int(input("opción: "))
         except ValueError:
             print("opción no válida...")
+            os.system("pause")
         else:
             if(opc == 1):
                 cuf.agregarFormato()
@@ -77,18 +85,23 @@ def GestorPeliculas():
     isActive = True 
     while(isActive):
         os.system('cls')
+        print("")
+        print(" GESTOR DE PELICULAS ")
+        print("-------------------------------------")
         print(MenuPeliculas)
         try:
             print("")
             opc = int(input("opción: "))
         except ValueError:
             print("opción no válida...")
+            os.system("pause")
         else:
             if(opc == 1):
                 cus.agregarPelicula()
                 os.system('pause')
             elif(opc == 2):
-                pass
+                pe.searchCustomer()
+                os.system('pause')
             elif(opc == 3):
                 cus.EliminarPelicula()
                 os.system('pause')
@@ -112,6 +125,7 @@ def GestorInformes():
             opc = int(input("opción: "))
         except ValueError:
             print("opción no válida...")
+            os.system("pause")
         else:
             if(opc == 1):
                 pass
