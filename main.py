@@ -1,6 +1,6 @@
 import os
 import ui.menus as menu
-MenuPeliculasBlock = ['1.Administrador de generos','2.Administador de actores','3.Administrador de formatos','4.Gestor de informes','5.Gestor de peliculas','6. salir']
+MenuPeliculasBlock = ('1. Administrador de generos\n2. Administador de actores\n3. Administrador de formatos\n4. Gestor de informes\n5. Gestor de peliculas\n6. salir')
 
 isActive = True
 
@@ -14,7 +14,7 @@ while(isActive):
         print("opción no válida...")
     else:
         if(opc == 1):
-            menu.Administradorgeneros()
+            menu.Administradorgeneros() 
         elif(opc == 2):
             menu.AdministadorActores()
         elif(opc == 3):
@@ -22,7 +22,7 @@ while(isActive):
         elif(opc == 4):
             menu.GestorInformes()
         elif(opc == 5):
-            menu.
+            menu.GestorPeliculas()
         elif(opc == 6):
             print("Hasta pronto...")
             os.system('pause')
