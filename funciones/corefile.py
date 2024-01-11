@@ -1,7 +1,7 @@
 import json
 import os
 
-MY_DATA = ''
+MY_DATA = 'data/peliculas.json'
 
 def newfile (*param):
     with open (MY_DATA,'w') as wf:

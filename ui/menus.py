@@ -71,13 +71,12 @@ def GestorPeliculas():
         print(MenuPeliculas)
         try:
             print("")
-            opc = int(input("opción: "))
+            opc = int(input("opción p: "))
         except ValueError:
             print("opción no válida...")
         else:
             if(opc == 1):
                 cus.agregarPelicula
-                os.system('pause')
             elif(opc == 2):
                 pass
             elif(opc == 3):

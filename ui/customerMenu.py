@@ -10,6 +10,7 @@ def generarPelicula():
 # def BuscarPelicula():
 #     data = cp.
 def agregarPelicula():
+    print("aaaaaaaaaaa")
     cp.cf.checkfile(cp.peliculas)
     id = int(input("Ingrese el id de la pelicula: "))
     nom = input("Ingrese el nombre de la pelicula: ")
