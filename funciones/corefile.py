@@ -18,6 +18,7 @@ def addData(id: str, *args: dict):
         json.dump(data_file,rwf,indent=4)
         rwf.close()
 
+
 def eliminar(*param):
     data=list(param)
     data[1].pop(data[0])

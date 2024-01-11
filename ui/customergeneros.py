@@ -1,11 +1,7 @@
 import os
 import funciones.peliculas as cp
 import funciones.corefile as cf
-# peliuclas = {}
-
-# def generarPelicula():
-#     cp.cf.checkfile(cp.peliculas)
-
+peliculas = {}
 def agregarGenero():
     cp.cf.checkfile(cp.peliculas)
     id = input("Ingrese el id del genero: ")
@@ -17,11 +13,8 @@ def agregarGenero():
     print(genero)
     cf.addData(id,nom)
     os.system('pause')
+    return genero
 
-def listarGenero(genero: dict):
+def listarGenero():
     cf.readfile()
-    print(genero)
     os.system('pause')
-    # for i,j in peliculas.items():
-    #     for key,item in j.items():
-    #         print(f"{key}:{item}")

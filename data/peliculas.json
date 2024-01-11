@@ -1,15 +1,12 @@
 {
-    "3": "gg",
-    "4": "terror",
-    "10": "james",
-    "1": "miedo"
-}: "45",
+    "3": {
+        "id": 3,
+        "nombre": "aaaa",
+        "duracion": "45",
         "sipnosis": "fff",
         "generos": "",
         "actores": "",
         "formato": ""
     },
-    "4": "terror",
-    "10": "james",
-    "1": "miedo"
+    "2": "sss"
 }
